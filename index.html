@@ -1,0 +1,1153 @@
+<!doctype html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Gostilnica in pizzerija Chilli, Jesenice. Pice iz krušne peči, Black Angus steaki, mehiška kuhinja in palačinke velikanke. Trg Tonete Čufarja 3.">
+<meta name="theme-color" content="#FCFAF7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23C1121F'/%3E%3Cpath fill='%23fff' d='M16.6 4.6c.6-1.4 1.9-2.3 3.4-2.4.4 0 .6.5.3.8-1 .6-1.6 1.3-1.9 2.1 1.8 1 2.4 3.1 1.4 5.5-1.7 4.2-6.4 8.8-12.7 10.8-1.5.5-2.7-1-1.8-2.3 2.9-4.1 5.2-8.1 7.7-11.6.9-1.3 2.2-2.5 3.6-2.9z'/%3E%3C/svg%3E">
+<title>Gostilnica in pizzerija Chilli · Jesenice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+  :root {
+    --porcelain: #FCFAF7;
+    --linen: #F3EDE4;
+    --linen-2: #EAE2D6;
+    --ink: #1A1412;
+    --ink-2: #3B302B;
+    --smoke: #7A6D66;
+    --hair: #E4DBCF;
+    --chilli: #C1121F;
+    --ember: #8E0E1A;
+    --flame: #E8632B;
+    --saffron: #F2B84B;
+    --basil: #2E5E4E;
+    --basil-soft: #E3EEE8;
+    --chilli-soft: #FBE7E6;
+
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+
+    --max: 1200px;
+    --gutter: clamp(20px, 4vw, 48px);
+    --r: 14px;
+    --r-lg: 24px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--porcelain);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection { background: var(--chilli); color: #fff; }
+
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--chilli);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--display);
+    font-variation-settings: "opsz" 96;
+    letter-spacing: -0.025em;
+    line-height: 1;
+    margin: 0;
+    text-wrap: balance;
+  }
+  p { margin: 0; }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+
+  .eyebrow {
+    font-family: var(--body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--smoke);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 22px; height: 2px;
+    background: var(--chilli);
+    border-radius: 2px;
+  }
+
+  .dialect {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.35rem;
+    color: var(--smoke);
+    letter-spacing: 0;
+    line-height: 1.2;
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1;
+    border: 1.5px solid transparent;
+    transition: transform .25s cubic-bezier(.2,.8,.2,1), background .25s, border-color .25s, color .25s, box-shadow .25s;
+    white-space: nowrap;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn:active { transform: translateY(0); }
+  .btn-primary { background: var(--chilli); color: #fff; box-shadow: 0 8px 24px -10px rgba(193,18,31,.55); }
+  .btn-primary:hover { background: var(--ember); box-shadow: 0 12px 28px -10px rgba(142,14,26,.6); }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--hair); }
+  .btn-ghost:hover { border-color: var(--ink); background: #fff; }
+  .btn svg { width: 16px; height: 16px; }
+
+  /* ---------- NAV ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(252,250,247,.82);
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s;
+  }
+  .nav.scrolled { border-bottom-color: var(--hair); }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px;
+    height: 76px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-mark {
+    width: 40px; height: 40px; border-radius: 12px;
+    background: var(--chilli);
+    display: grid; place-items: center;
+    color: #fff;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,.15);
+  }
+  .brand-mark svg { width: 22px; height: 22px; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .brand-name { font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: -0.03em; }
+  .brand-sub { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--smoke); margin-top: 3px; font-weight: 600; }
+
+  .nav-links { display: flex; gap: 6px; align-items: center; }
+  .nav-links a {
+    padding: 10px 14px; border-radius: 999px;
+    font-size: 15px; font-weight: 500; color: var(--ink-2);
+    transition: background .2s, color .2s;
+  }
+  .nav-links a:hover { background: var(--linen); color: var(--ink); }
+  .nav-cta { display: flex; gap: 10px; align-items: center; }
+  .nav-cta .btn { padding: 12px 18px; }
+  .nav-phone { font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink-2); padding: 10px 6px; }
+  .nav-phone:hover { color: var(--chilli); }
+
+  .burger {
+    display: none; background: none; border: 1.5px solid var(--hair); border-radius: 999px;
+    width: 44px; height: 44px; align-items: center; justify-content: center; cursor: pointer; color: var(--ink);
+  }
+  .burger svg { width: 20px; height: 20px; }
+
+  .mobile-menu {
+    display: none; border-top: 1px solid var(--hair); background: var(--porcelain);
+    padding: 12px var(--gutter) 20px;
+  }
+  .mobile-menu a { display: block; padding: 12px 4px; font-size: 18px; font-weight: 500; border-bottom: 1px solid var(--hair); }
+  .mobile-menu a:last-child { border-bottom: 0; }
+  .nav.open .mobile-menu { display: block; }
+
+  @media (max-width: 900px) {
+    .nav-links, .nav-phone { display: none; }
+    .burger { display: inline-flex; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero { padding: clamp(40px, 6vw, 88px) 0 clamp(48px, 6vw, 96px); overflow: hidden; }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: clamp(32px, 5vw, 72px);
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(3rem, 7.4vw, 6.6rem);
+    font-weight: 800;
+    font-variation-settings: "opsz" 96, "wdth" 92;
+    line-height: .94;
+    margin-top: 22px;
+    letter-spacing: -0.035em;
+  }
+  .hero h1 .accent { color: var(--chilli); }
+  .hero h1 .soft { font-weight: 300; font-variation-settings: "opsz" 96, "wdth" 100; letter-spacing: -0.02em; }
+  .hero p.lede {
+    margin-top: 26px;
+    font-size: clamp(17px, 1.35vw, 20px);
+    color: var(--ink-2);
+    max-width: 34em;
+  }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; align-items: center; }
+
+  .status {
+    display: inline-flex; align-items: center; gap: 10px;
+    margin-top: 28px;
+    padding: 10px 14px 10px 12px;
+    background: #fff;
+    border: 1px solid var(--hair);
+    border-radius: 999px;
+    font-size: 14px; font-weight: 500; color: var(--ink-2);
+    font-variant-numeric: tabular-nums;
+  }
+  .status .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--basil); box-shadow: 0 0 0 4px rgba(46,94,78,.14); }
+  .status.closed .dot { background: var(--chilli); box-shadow: 0 0 0 4px rgba(193,18,31,.14); }
+  .status b { font-weight: 700; color: var(--ink); }
+
+  /* Photo slot component */
+  .ph {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--r-lg);
+    background:
+      radial-gradient(120% 90% at 20% 15%, #F6D7B3 0%, transparent 55%),
+      radial-gradient(90% 80% at 85% 80%, #B8442A 0%, transparent 60%),
+      radial-gradient(70% 60% at 70% 20%, #E8A45E 0%, transparent 60%),
+      linear-gradient(160deg, #F3E3D0, #C97544 55%, #6E2A1C);
+    color: #fff;
+    isolation: isolate;
+  }
+  .ph.olive {
+    background:
+      radial-gradient(110% 80% at 15% 20%, #E7EBD6 0%, transparent 55%),
+      radial-gradient(80% 70% at 85% 85%, #3C5A48 0%, transparent 60%),
+      linear-gradient(160deg, #E4E7CF, #8FA37E 55%, #2E4A3B);
+  }
+  .ph.char {
+    background:
+      radial-gradient(110% 80% at 25% 10%, #F5E6DA 0%, transparent 50%),
+      radial-gradient(80% 70% at 80% 90%, #7A2E1A 0%, transparent 60%),
+      linear-gradient(160deg, #E9D3C2, #8E5A44 55%, #2B1A16);
+  }
+  .ph.sea {
+    background:
+      radial-gradient(110% 80% at 20% 15%, #EEF3F2 0%, transparent 55%),
+      radial-gradient(80% 70% at 85% 85%, #2F5E6B 0%, transparent 60%),
+      linear-gradient(160deg, #E3ECEA, #7FA5A9 55%, #24454D);
+  }
+  .ph.sweet {
+    background:
+      radial-gradient(110% 80% at 20% 15%, #FBEDE3 0%, transparent 55%),
+      radial-gradient(80% 70% at 85% 85%, #8A4A3A 0%, transparent 60%),
+      linear-gradient(160deg, #F7E3D8, #D19A86 55%, #5A2F27);
+  }
+  .ph::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: var(--grain);
+    background-size: 180px 180px;
+    opacity: .55;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+  .ph::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(20,10,8,.55), rgba(20,10,8,0) 55%);
+    pointer-events: none;
+  }
+  .ph .cap {
+    position: absolute; left: 18px; bottom: 16px; z-index: 2;
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; letter-spacing: .1em; text-transform: uppercase; font-weight: 600;
+    color: rgba(255,255,255,.92);
+  }
+  .ph .cap svg { width: 14px; height: 14px; opacity: .9; }
+
+  .hero-visual { position: relative; }
+  .hero-visual .ph { aspect-ratio: 4 / 5; width: 100%; box-shadow: 0 40px 80px -40px rgba(60,30,20,.45); }
+  .hero-visual canvas.embers { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+
+  .float-card {
+    position: absolute; z-index: 3;
+    left: -28px; bottom: 56px;
+    background: #fff;
+    border: 1px solid var(--hair);
+    border-radius: 18px;
+    padding: 16px 18px;
+    box-shadow: 0 30px 60px -30px rgba(40,20,10,.35);
+    min-width: 240px;
+    max-width: 78%;
+  }
+  .float-card .fc-label { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--chilli); font-weight: 700; }
+  .float-card .fc-title { font-family: var(--display); font-weight: 700; font-size: 18px; margin-top: 6px; letter-spacing: -0.02em; line-height: 1.15; }
+  .float-card .fc-meta { display: flex; justify-content: space-between; align-items: baseline; margin-top: 10px; color: var(--smoke); font-size: 14px; }
+  .float-card .fc-meta b { color: var(--ink); font-size: 17px; font-variant-numeric: tabular-nums; }
+
+  .badge-oven {
+    position: absolute; z-index: 3; right: -16px; top: 28px;
+    width: 116px; height: 116px; border-radius: 50%;
+    background: var(--ink); color: var(--porcelain);
+    display: grid; place-items: center; text-align: center;
+    box-shadow: 0 20px 40px -20px rgba(0,0,0,.5);
+    animation: spin 28s linear infinite;
+  }
+  .badge-oven svg { width: 100%; height: 100%; }
+  .badge-oven text { font-family: var(--body); font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; fill: var(--porcelain); }
+  .badge-oven .core { position: absolute; inset: 0; display: grid; place-items: center; animation: spin 28s linear infinite reverse; }
+  .badge-oven .core svg { width: 34px; height: 34px; fill: var(--saffron); }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  @media (max-width: 960px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-visual { max-width: 560px; }
+    .float-card { left: 16px; }
+    .badge-oven { right: 12px; }
+  }
+
+  /* Load-in */
+  .rise { animation: rise .7s cubic-bezier(.2,.8,.2,1) both; }
+  .rise.d1 { animation-delay: .06s } .rise.d2 { animation-delay: .14s } .rise.d3 { animation-delay: .22s } .rise.d4 { animation-delay: .3s } .rise.d5 { animation-delay: .38s }
+  @keyframes rise { from { transform: translateY(18px); } to { transform: translateY(0); } }
+  @media (prefers-reduced-motion: reduce) {
+    .rise, .badge-oven, .badge-oven .core { animation: none !important; }
+    .btn:hover { transform: none; }
+  }
+
+  /* ---------- DAILY ---------- */
+  .daily { padding: 12px 0 clamp(56px, 7vw, 104px); }
+  .daily-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 28px; }
+  .daily-head h2 { font-size: clamp(2rem, 3.6vw, 3rem); font-weight: 700; margin-top: 14px; }
+  .daily-head .note { color: var(--smoke); font-size: 15px; max-width: 30em; }
+  .daily-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-top: 1px solid var(--hair);
+    border-left: 1px solid var(--hair);
+  }
+  .daily-item {
+    border-right: 1px solid var(--hair);
+    border-bottom: 1px solid var(--hair);
+    padding: 22px 20px 20px;
+    display: flex; flex-direction: column; gap: 14px;
+    min-height: 150px;
+    background: transparent;
+    transition: background .25s;
+    position: relative;
+  }
+  .daily-item:hover { background: #fff; }
+  .daily-item .di-name { font-family: var(--display); font-weight: 600; font-size: 18px; letter-spacing: -0.015em; line-height: 1.2; }
+  .daily-item .di-side { color: var(--smoke); font-size: 14px; }
+  .daily-item .di-price { margin-top: auto; font-weight: 600; font-variant-numeric: tabular-nums; display: flex; align-items: center; justify-content: space-between; }
+  .daily-item .di-price .tag { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--smoke); font-weight: 600; }
+  @media (max-width: 900px) { .daily-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+  @media (max-width: 520px) { .daily-grid { grid-template-columns: 1fr; } }
+
+  /* ---------- PILLARS ---------- */
+  .pillars { background: var(--linen); padding: clamp(64px, 8vw, 120px) 0; }
+  .pillars-head { max-width: 40em; }
+  .pillars-head h2 { font-size: clamp(2.2rem, 4.4vw, 3.8rem); font-weight: 700; margin-top: 16px; }
+  .pillars-head p { margin-top: 18px; color: var(--ink-2); font-size: 18px; }
+  .pillar-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; margin-top: 48px; }
+  .pillar {
+    background: var(--porcelain);
+    border-radius: var(--r-lg);
+    padding: 8px;
+    display: flex; flex-direction: column;
+    transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s;
+  }
+  .pillar:hover { transform: translateY(-4px); box-shadow: 0 30px 50px -35px rgba(60,30,20,.45); }
+  .pillar .ph { aspect-ratio: 4 / 3; border-radius: 18px; }
+  .pillar-body { padding: 22px 18px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .pillar h3 { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; }
+  .pillar p { color: var(--ink-2); font-size: 15.5px; }
+  .pillar .fact {
+    margin-top: auto; padding-top: 16px; border-top: 1px dashed var(--hair);
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 13px; color: var(--smoke); letter-spacing: .04em;
+  }
+  .pillar .fact b { font-family: var(--display); font-size: 22px; color: var(--ink); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  @media (max-width: 900px) { .pillar-grid { grid-template-columns: 1fr; } .pillar .ph { aspect-ratio: 16 / 9; } }
+
+  /* ---------- MENU ---------- */
+  .menu { padding: clamp(64px, 8vw, 120px) 0; }
+  .menu-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: end; }
+  .menu-head h2 { font-size: clamp(2.4rem, 5vw, 4.4rem); font-weight: 800; margin-top: 16px; letter-spacing: -0.035em; }
+  .menu-head .dialect { display: block; margin-top: 12px; }
+  .menu-head .pdf { align-self: end; }
+  @media (max-width: 720px) { .menu-head { grid-template-columns: 1fr; } }
+
+  .tabs-wrap {
+    position: sticky; top: 76px; z-index: 40;
+    margin-top: 40px;
+    background: linear-gradient(var(--porcelain) 70%, rgba(252,250,247,0));
+    padding-bottom: 14px;
+  }
+  .tabs {
+    display: flex; gap: 8px;
+    overflow-x: auto; scrollbar-width: none;
+    padding: 12px 2px 6px;
+    -webkit-overflow-scrolling: touch;
+    mask-image: linear-gradient(to right, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab {
+    flex: 0 0 auto;
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--hair);
+    background: #fff;
+    color: var(--ink-2);
+    font: inherit; font-size: 14.5px; font-weight: 500;
+    cursor: pointer;
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  .tab:hover { border-color: var(--ink); color: var(--ink); }
+  .tab[aria-selected="true"] { background: var(--ink); color: var(--porcelain); border-color: var(--ink); }
+  .tab .n { font-size: 11.5px; font-weight: 600; color: var(--smoke); font-variant-numeric: tabular-nums; }
+  .tab[aria-selected="true"] .n { color: rgba(252,250,247,.6); }
+
+  .menu-panel { margin-top: 28px; }
+  .section-title { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; margin-bottom: 8px; }
+  .section-title h3 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; }
+  .section-title .dialect { font-size: 1.25rem; }
+  .section-note { color: var(--smoke); font-size: 14.5px; margin-bottom: 8px; }
+
+  .dishes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 56px;
+    margin-top: 22px;
+  }
+  .dish {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) auto;
+    column-gap: 14px;
+    align-items: baseline;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--hair);
+    animation: dishIn .45s cubic-bezier(.2,.8,.2,1) both;
+  }
+  @keyframes dishIn { from { opacity: .35; transform: translateY(6px);} to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .dish { animation: none; } }
+  .dish-name {
+    font-weight: 500; font-size: 17px; letter-spacing: -0.005em; line-height: 1.3;
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .dish-name .leader { flex: 1 1 24px; min-width: 24px; border-bottom: 1px dotted var(--linen-2); transform: translateY(-4px); }
+  .dish-price { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; font-size: 16.5px; }
+  .dish-price small { font-weight: 500; color: var(--smoke); font-size: 12.5px; margin-left: 3px; }
+  .dish-desc { grid-column: 1 / -1; color: var(--smoke); font-size: 14px; margin-top: 4px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 999px; vertical-align: middle;
+  }
+  .chip svg { width: 11px; height: 11px; }
+  .chip.hot { background: var(--chilli-soft); color: var(--ember); }
+  .chip.veg { background: var(--basil-soft); color: var(--basil); }
+  .chip.two { background: var(--linen); color: var(--ink-2); }
+  @media (max-width: 760px) { .dishes { grid-template-columns: 1fr; } }
+
+  /* ---------- OVEN BAND ---------- */
+  .oven {
+    position: relative;
+    background: var(--ink);
+    color: var(--porcelain);
+    padding: clamp(64px, 8vw, 110px) 0;
+    overflow: hidden;
+  }
+  .oven canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+  .oven .wrap { position: relative; z-index: 1; }
+  .oven-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+  .oven .eyebrow { color: rgba(252,250,247,.6); }
+  .oven .eyebrow::before { background: var(--saffron); }
+  .oven h2 { font-size: clamp(2.4rem, 5vw, 4.4rem); font-weight: 800; margin-top: 16px; letter-spacing: -0.035em; }
+  .oven h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--saffron); letter-spacing: 0; }
+  .oven p { margin-top: 20px; color: rgba(252,250,247,.75); font-size: 17.5px; max-width: 32em; }
+  .oven .btn-light { background: var(--porcelain); color: var(--ink); margin-top: 28px; }
+  .oven .btn-light:hover { background: #fff; }
+  .pizza-wall { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0 28px; }
+  .pizza-wall .pw {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+    padding: 12px 0; border-bottom: 1px solid rgba(252,250,247,.12);
+    font-size: 15px;
+  }
+  .pizza-wall .pw span:first-child { font-family: var(--display); font-weight: 600; letter-spacing: -0.01em; }
+  .pizza-wall .pw span:last-child { color: rgba(252,250,247,.6); font-variant-numeric: tabular-nums; }
+  .pizza-wall .pw.hot span:first-child::after { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--chilli); margin-left: 8px; vertical-align: middle; }
+  @media (max-width: 960px) { .oven-grid { grid-template-columns: 1fr; } .pizza-wall { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+  @media (max-width: 520px) { .pizza-wall { grid-template-columns: 1fr; } }
+
+  /* ---------- ABOUT + GALLERY ---------- */
+  .about { padding: clamp(64px, 8vw, 120px) 0 0; }
+  .about-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+  .about h2 { font-size: clamp(2.2rem, 4.4vw, 3.6rem); font-weight: 700; margin-top: 16px; }
+  .about blockquote {
+    margin: 26px 0 0;
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.4rem, 2.2vw, 1.85rem); line-height: 1.3;
+    color: var(--ink-2);
+    text-wrap: pretty;
+  }
+  .about blockquote::before { content: "»"; color: var(--chilli); }
+  .about blockquote::after { content: "«"; color: var(--chilli); }
+  .about .sig { margin-top: 18px; color: var(--smoke); font-size: 15px; }
+  .about-facts { margin-top: 36px; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+  .fact-tile { border-top: 2px solid var(--ink); padding-top: 12px; }
+  .fact-tile b { font-family: var(--display); font-size: 30px; font-weight: 700; letter-spacing: -0.03em; display: block; font-variant-numeric: tabular-nums; }
+  .fact-tile span { font-size: 13px; color: var(--smoke); letter-spacing: .02em; }
+  .gallery { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); grid-auto-rows: 120px; gap: 14px; }
+  .gallery .ph { border-radius: 18px; }
+  .gallery .g1 { grid-column: span 4; grid-row: span 2; }
+  .gallery .g2 { grid-column: span 2; grid-row: span 2; }
+  .gallery .g3 { grid-column: span 2; grid-row: span 2; }
+  .gallery .g4 { grid-column: span 2; grid-row: span 2; }
+  .gallery .g5 { grid-column: span 2; grid-row: span 2; }
+  @media (max-width: 960px) { .about-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .about-facts { grid-template-columns: 1fr 1fr; } .gallery { grid-auto-rows: 90px; } }
+
+  /* ---------- VISIT ---------- */
+  .visit { padding: clamp(64px, 8vw, 120px) 0; }
+  .visit-card {
+    display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+    background: var(--linen);
+    border-radius: 28px;
+    overflow: hidden;
+  }
+  .visit-info { padding: clamp(28px, 4vw, 56px); display: flex; flex-direction: column; gap: 32px; }
+  .visit h2 { font-size: clamp(2.2rem, 4.2vw, 3.4rem); font-weight: 700; margin-top: 16px; }
+  .addr { font-family: var(--display); font-size: clamp(1.25rem, 1.8vw, 1.6rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.25; }
+  .addr small { display: block; font-family: var(--body); font-size: 15px; font-weight: 400; color: var(--smoke); letter-spacing: 0; margin-top: 6px; }
+  .hours { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  .hours td { padding: 10px 0; border-bottom: 1px solid var(--linen-2); font-size: 15.5px; }
+  .hours td:last-child { text-align: right; font-weight: 600; }
+  .hours tr.today td { color: var(--chilli); font-weight: 600; }
+  .hours tr.today td:first-child::after { content: "danes"; font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; margin-left: 10px; padding: 2px 7px; background: var(--chilli); color: #fff; border-radius: 999px; vertical-align: middle; }
+  .contact-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .visit-map {
+    position: relative; min-height: 420px;
+    background: #E7E1D6;
+    overflow: hidden;
+  }
+  .visit-map canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .pin {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -100%);
+    display: flex; flex-direction: column; align-items: center; gap: 0;
+  }
+  .pin .pin-card {
+    background: #fff; border: 1px solid var(--hair); border-radius: 14px;
+    padding: 12px 14px; box-shadow: 0 20px 40px -20px rgba(40,20,10,.35);
+    font-size: 14px; white-space: nowrap;
+  }
+  .pin .pin-card b { display: block; font-family: var(--display); font-size: 16px; letter-spacing: -0.02em; }
+  .pin .pin-dot { width: 16px; height: 16px; border-radius: 50%; background: var(--chilli); border: 3px solid #fff; box-shadow: 0 0 0 6px rgba(193,18,31,.18); margin-top: 10px; }
+  .map-link { position: absolute; right: 16px; bottom: 16px; }
+  @media (max-width: 900px) { .visit-card { grid-template-columns: 1fr; } .visit-map { min-height: 340px; } }
+
+  /* ---------- FOOTER ---------- */
+  footer { border-top: 1px solid var(--hair); padding: 40px 0 48px; }
+  .foot { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: flex-start; }
+  .foot-links { display: flex; gap: 22px; flex-wrap: wrap; font-size: 15px; color: var(--ink-2); }
+  .foot-links a:hover { color: var(--chilli); }
+  .foot small { display: block; margin-top: 12px; color: var(--smoke); font-size: 13px; }
+  .foot-big {
+    margin-top: 40px;
+    font-family: var(--display); font-weight: 800;
+    font-size: clamp(3rem, 12vw, 11rem);
+    letter-spacing: -0.05em; line-height: .85;
+    color: var(--linen-2);
+    user-select: none;
+    text-wrap: nowrap; overflow: hidden;
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Gostilnica in pizzerija Chilli">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 4.6c.6-1.4 1.9-2.3 3.4-2.4.4 0 .6.5.3.8-1 .6-1.6 1.3-1.9 2.1 1.8 1 2.4 3.1 1.4 5.5-1.7 4.2-6.4 8.8-12.7 10.8-1.5.5-2.7-1-1.8-2.3 2.9-4.1 5.2-8.1 7.7-11.6.9-1.3 2.2-2.5 3.6-2.9z"/></svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">Chilli</span>
+        <span class="brand-sub">Gostilnica · Pizzerija · Jesenice</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Glavna navigacija">
+      <a href="#dnevna">Dnevna ponudba</a>
+      <a href="#jedilnik">Jedilnik</a>
+      <a href="#pizze">Krušna peč</a>
+      <a href="#onas">O nas</a>
+      <a href="#obisk">Obisk</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+38671209000">071 209 000</a>
+      <a class="btn btn-primary" href="tel:+38671209000">Rezerviraj mizo</a>
+      <button class="burger" id="burger" aria-label="Odpri meni" aria-expanded="false" aria-controls="mobileMenu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#dnevna">Dnevna ponudba</a>
+    <a href="#jedilnik">Jedilnik</a>
+    <a href="#pizze">Krušna peč</a>
+    <a href="#onas">O nas</a>
+    <a href="#obisk">Obisk in odpiralni čas</a>
+    <a href="tel:+38671209000">Pokliči 071 209 000</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow rise">Trg Tonete Čufarja 3 · Jesenice</span>
+        <h1 class="rise d1">Krušna peč,<br>žar <span class="soft">in</span><br><span class="accent">kanček Mehike.</span></h1>
+        <p class="lede rise d2">Gostilnica in pizzerija na jeseniškem trgu. Pice iz krušne peči, Black Angus steaki na žaru, fajitas za dva in palačinke velikanke, ki jih redko kdo poje sam.</p>
+        <div class="hero-actions rise d3">
+          <a class="btn btn-primary" href="#jedilnik">Poglej jedilnik
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="tel:+38671209000">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+            +386 71 209 000
+          </a>
+        </div>
+        <div class="status rise d4" id="status" aria-live="polite">
+          <span class="dot"></span>
+          <span id="statusText">Odpiralni čas: pon–čet 9–23, pet 9–24, sob 10–24, ned 10–23</span>
+        </div>
+      </div>
+
+      <div class="hero-visual rise d2">
+        <div class="ph">
+          <canvas class="embers" id="embers" aria-hidden="true"></canvas>
+          <span class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Pica iz krušne peči</span>
+        </div>
+        <div class="badge-oven" aria-hidden="true">
+          <svg viewBox="0 0 116 116"><defs><path id="circ" d="M58 58 m-42 0 a42 42 0 1 1 84 0 a42 42 0 1 1 -84 0"/></defs><text><textPath href="#circ" startOffset="0">Krušna peč · Žar · Pizza &amp; Mex · </textPath></text></svg>
+          <span class="core"><svg viewBox="0 0 24 24"><path d="M12 2c1 3 4 4.5 4 8.5a4 4 0 0 1-8 0c0-1.5.5-2.5 1.2-3.5.3 1.2 1 2 1.8 2.3C11 7.5 11 4.5 12 2zm0 20a7 7 0 0 1-7-7c0-2.6 1.3-4.6 3-6 .2 2.6 1.6 4 4 4s3.8-1.4 4-4c1.7 1.4 3 3.4 3 6a7 7 0 0 1-7 7z"/></svg></span>
+        </div>
+        <div class="float-card" id="todayCard">
+          <div class="fc-label">Danes iz dnevne ponudbe</div>
+          <div class="fc-title">Tacos s hobotnico in gamberi</div>
+          <div class="fc-meta"><span>s solato</span><b>10,50 €</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY -->
+  <section class="daily" id="dnevna">
+    <div class="wrap">
+      <div class="daily-head">
+        <div>
+          <span class="eyebrow">Dnevna ponudba</span>
+          <h2>Malica, ki se je ne da pozabit.</h2>
+        </div>
+        <p class="note">Osem krožnikov, vsak s solato. Ponudba se menja, cene ostajajo poštene. Za dnevno aktualno pokličite ali sledite naši Facebook strani.</p>
+      </div>
+      <div class="daily-grid" id="dailyGrid"></div>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="pillars">
+    <div class="wrap">
+      <div class="pillars-head">
+        <span class="eyebrow">Tri stvari, ki jih delamo drugače</span>
+        <h2>Ena kuhinja, tri strasti.</h2>
+        <p>Pri Chilliju se pod eno streho srečajo gorenjska gostilna, prava pizzerija s krušno pečjo in mehiška kuhinja. Ni kompromis, je izbira.</p>
+      </div>
+      <div class="pillar-grid">
+        <article class="pillar">
+          <div class="ph char"><span class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Peč in ogenj</span></div>
+          <div class="pillar-body">
+            <h3>Krušna peč</h3>
+            <p>Enaindvajset pic, pizza kruhki in spare ribs, ki se pečejo v isti peči. Od Margerite do Bele tartufate in Burrate.</p>
+            <div class="fact"><span>Pic na jedilniku</span><b>21</b></div>
+          </div>
+        </article>
+        <article class="pillar">
+          <div class="ph"><span class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Steak na žaru</span></div>
+          <div class="pillar-body">
+            <h3>Steak house</h3>
+            <p>Black Angus iz Avstralije in Kanade, irski biftek, telečji T-bone. Kosi se tehtajo, cena je na 100 gramov, ne na približno.</p>
+            <div class="fact"><span>Ribeye Black Angus Prime</span><b>10,10 € <small style="font-family:var(--body);font-size:12px;color:var(--smoke)">/ 100 g</small></b></div>
+          </div>
+        </article>
+        <article class="pillar">
+          <div class="ph olive"><span class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Fajitas za dva</span></div>
+          <div class="pillar-body">
+            <h3>Po mehiško</h3>
+            <p>Fajitas na cvrčeči plošči, chimichangas, quesadillas in tacosi. Plato mexicano za dva, kadar se ne morete odločiti.</p>
+            <div class="fact"><span>Mehiških jedi</span><b>19</b></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="jedilnik">
+    <div class="wrap">
+      <div class="menu-head">
+        <div>
+          <span class="eyebrow">Jedilnik</span>
+          <h2>Kaj je danes na mizi</h2>
+          <span class="dialect">Od »nekej za lažje počakat« do »sladkega kotička«.</span>
+        </div>
+        <a class="btn btn-ghost pdf" href="tel:+38671209000">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          Naročilo za s sabo
+        </a>
+      </div>
+
+      <div class="tabs-wrap">
+        <div class="tabs" role="tablist" aria-label="Kategorije jedilnika" id="tabs"></div>
+      </div>
+
+      <div class="menu-panel" id="menuPanel" role="tabpanel"></div>
+    </div>
+  </section>
+
+  <!-- OVEN BAND -->
+  <section class="oven" id="pizze">
+    <canvas id="ovenCanvas" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="oven-grid">
+        <div>
+          <span class="eyebrow">Iz krušne peči</span>
+          <h2>Enaindvajset pic. <em>Ena peč.</em></h2>
+          <p>Testo počiva, peč pa gori. Klasike, kraška s pršutom, morska, kulen za tiste, ki radi pikantno, in Bela tartufata za tiste, ki radi tiho uživajo.</p>
+          <a class="btn btn-light" href="tel:+38671209000">Naroči pico za s sabo</a>
+        </div>
+        <div class="pizza-wall" id="pizzaWall"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="onas">
+    <div class="wrap about-grid">
+      <div>
+        <span class="eyebrow">O nas</span>
+        <h2>Gostilna na trgu, kjer se Jesenice dobijo.</h2>
+        <blockquote>V gostilnici Chilli smo zares veseli vašega obiska. Skrbno smo izbrali jedilni list, s katerim vam bomo ustregli v vsaki želji, vam prisluhnili in ponudili najboljše iz rok naših kuharskih mojstrov, tiste drobne malenkosti, ki štejejo!</blockquote>
+        <p class="sig">Ekipa Gostilnice in pizzerije Chilli</p>
+        <div class="about-facts">
+          <div class="fact-tile"><b>15</b><span>razdelkov jedilnika</span></div>
+          <div class="fact-tile"><b>7 / 7</b><span>dni v tednu odprto</span></div>
+          <div class="fact-tile"><b>4</b><span>veganske jedi</span></div>
+        </div>
+      </div>
+      <div class="gallery" aria-label="Galerija">
+        <div class="ph g1"><span class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Terasa na trgu</span></div>
+        <div class="ph g2 char"><span class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Tagliata</span></div>
+        <div class="ph g3 sea"><span class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Hobotnica na žaru</span></div>
+        <div class="ph g4 olive"><span class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Bovle</span></div>
+        <div class="ph g5 sweet"><span class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Palačinka velikanka</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="visit" id="obisk">
+    <div class="wrap">
+      <div class="visit-card">
+        <div class="visit-info">
+          <div>
+            <span class="eyebrow">Obisk</span>
+            <h2>Pridite, ko ste lačni.</h2>
+          </div>
+          <div class="addr">Trg Tonete Čufarja 3<br>4270 Jesenice
+            <small>Na glavnem trgu, terasa poleti, parkiranje v bližini.</small>
+          </div>
+          <table class="hours" id="hours" aria-label="Odpiralni čas">
+            <tbody>
+              <tr data-d="1"><td>Ponedeljek – četrtek</td><td>9.00 – 23.00</td></tr>
+              <tr data-d="5"><td>Petek</td><td>9.00 – 24.00</td></tr>
+              <tr data-d="6"><td>Sobota</td><td>10.00 – 24.00</td></tr>
+              <tr data-d="0"><td>Nedelja</td><td>10.00 – 23.00</td></tr>
+            </tbody>
+          </table>
+          <div class="contact-row">
+            <a class="btn btn-primary" href="tel:+38671209000">+386 71 209 000</a>
+            <a class="btn btn-ghost" href="mailto:info@gostilnica-chilli.si">info@gostilnica-chilli.si</a>
+          </div>
+        </div>
+        <div class="visit-map">
+          <canvas id="mapCanvas" aria-hidden="true"></canvas>
+          <div class="pin">
+            <div class="pin-card"><b>Gostilnica Chilli</b>Trg Tonete Čufarja 3, Jesenice</div>
+            <div class="pin-dot"></div>
+          </div>
+          <a class="btn btn-ghost map-link" href="https://www.google.com/maps/search/?api=1&query=Trg+Tonete+%C4%8Cufarja+3+4270+Jesenice" target="_blank" rel="noopener">Odpri v Zemljevidih</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 4.6c.6-1.4 1.9-2.3 3.4-2.4.4 0 .6.5.3.8-1 .6-1.6 1.3-1.9 2.1 1.8 1 2.4 3.1 1.4 5.5-1.7 4.2-6.4 8.8-12.7 10.8-1.5.5-2.7-1-1.8-2.3 2.9-4.1 5.2-8.1 7.7-11.6.9-1.3 2.2-2.5 3.6-2.9z"/></svg></span>
+          <span class="brand-text"><span class="brand-name">Chilli</span><span class="brand-sub">Gostilnica · Pizzerija · Bar</span></span>
+        </div>
+        <small>Trg Tonete Čufarja 3, 4270 Jesenice · info@gostilnica-chilli.si · +386 71 209 000</small>
+      </div>
+      <div class="foot-links">
+        <a href="#jedilnik">Jedilnik</a>
+        <a href="#dnevna">Dnevna ponudba</a>
+        <a href="https://www.facebook.com/chilli.jesenice" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener">TripAdvisor</a>
+        <a href="#obisk">Odpiralni čas</a>
+      </div>
+    </div>
+    <div class="foot-big" aria-hidden="true">Chilli Jesenice</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const fmt = (n) => n.toFixed(2).replace('.', ',') + ' €';
+
+  /* ---------- Grain texture for photo slots (generated once) ---------- */
+  (function grain() {
+    const c = document.createElement('canvas'); c.width = 180; c.height = 180;
+    const ctx = c.getContext('2d');
+    const img = ctx.createImageData(180, 180);
+    for (let i = 0; i < img.data.length; i += 4) {
+      const v = 110 + Math.random() * 90;
+      img.data[i] = img.data[i+1] = img.data[i+2] = v; img.data[i+3] = 255;
+    }
+    ctx.putImageData(img, 0, 0);
+    document.documentElement.style.setProperty('--grain', `url(${c.toDataURL()})`);
+  })();
+
+  /* ---------- Nav ---------- */
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll(); addEventListener('scroll', onScroll, { passive: true });
+  const burger = document.getElementById('burger');
+  burger.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Zapri meni' : 'Odpri meni');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }));
+
+  /* ---------- Opening hours (Europe/Ljubljana) ---------- */
+  const HOURS = { 0: [10, 23], 1: [9, 23], 2: [9, 23], 3: [9, 23], 4: [9, 23], 5: [9, 24], 6: [10, 24] };
+  const DAYS = ['nedeljo', 'ponedeljek', 'torek', 'sredo', 'četrtek', 'petek', 'soboto'];
+  function ljubljanaNow() {
+    try {
+      const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Ljubljana', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false }).formatToParts(new Date());
+      const get = (t) => parts.find(p => p.type === t).value;
+      const wd = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+      return { d: wd, h: parseInt(get('hour'), 10) % 24, m: parseInt(get('minute'), 10) };
+    } catch (e) { const n = new Date(); return { d: n.getDay(), h: n.getHours(), m: n.getMinutes() }; }
+  }
+  function updateStatus() {
+    const { d, h, m } = ljubljanaNow();
+    const [open, close] = HOURS[d];
+    const t = h + m / 60;
+    const el = document.getElementById('status'), txt = document.getElementById('statusText');
+    const hh = (x) => (x === 24 ? '24.00' : `${x}.00`);
+    if (t >= open && t < close) {
+      el.classList.remove('closed');
+      const left = close - t;
+      txt.innerHTML = `<b>Odprto zdaj</b> · do ${hh(close)}` + (left <= 1 ? ' · kuhinja kmalu zapira' : '');
+    } else {
+      el.classList.add('closed');
+      const nextD = t >= close ? (d + 1) % 7 : d;
+      const nextOpen = HOURS[nextD][0];
+      const when = t >= close ? `jutri ob ${hh(nextOpen)}` : `danes ob ${hh(nextOpen)}`;
+      txt.innerHTML = `<b>Trenutno zaprto</b> · odpremo ${when}`;
+    }
+    document.querySelectorAll('#hours tr').forEach(tr => {
+      const key = tr.dataset.d;
+      const isToday = key === '1' ? (d >= 1 && d <= 4) : String(d) === key;
+      tr.classList.toggle('today', isToday);
+    });
+  }
+  updateStatus(); setInterval(updateStatus, 60000);
+
+  /* ---------- Daily specials ---------- */
+  const DAILY = [
+    ['Ocvrte sardelice', 'coleslaw solata', 9.5],
+    ['Piščančji file v BBQ omaki', 'na rižu, solata', 9.5],
+    ['Goveji stroganov', 'riž, solata', 10.5],
+    ['Tacos s hobotnico in gamberi', 'solata', 10.5],
+    ['»Fitnes krožnik«', 'lahek, a nasiten', 10.0],
+    ['Vegi krožnik', 'brez mesa, z okusom', 9.5],
+    ['»Mexican beef bovla«', 'govedina, riž, fižol', 10.5],
+    ['Pica Salamca', 'iz krušne peči', 10.0],
+  ];
+  document.getElementById('dailyGrid').innerHTML = DAILY.map(([n, s, p]) => `
+    <div class="daily-item">
+      <div class="di-name">${n}</div>
+      <div class="di-side">${s}</div>
+      <div class="di-price"><span class="tag">Malica</span><span>${fmt(p)}</span></div>
+    </div>`).join('');
+
+  /* ---------- Menu data ---------- */
+  const HOT = 'hot', VEG = 'veg', TWO = 'two';
+  const MENU = [
+    { id: 'predjedi', name: 'Predjedi', dialect: 'Nekej za lažje počakat', items: [
+      ['Hišna piščančja paštetka', 12.9],
+      ['Hobotnica v solati', 13.7],
+      ['Brusketa s pečenimi jajčevci, sušenim paradižnikom in pršutom', 11.8],
+      ['Brusketa s hobotnico, avokadom in kozicami', 12.1],
+      ['Brusketa z mocarelo, sušenim paradižnikom in baziliko', 11.3],
+    ]},
+    { id: 'juhe', name: 'Juhe', dialect: 'Župce za želodček pogret', items: [
+      ['Goveja juha z domačimi rezanci', 4.9],
+      ['Gobova juha', 5.7],
+    ]},
+    { id: 'paste', name: 'Pašte', dialect: 'Pašte', items: [
+      ['Široki rezanci s kozicami na belo', 15.3],
+      ['Pljukanci z rozbifom in tartufi', 16.6],
+      ['Peresniki »Acapulco«', 14.8, [HOT]],
+      ['Pečeni riževi rezanci (pad thai) s piščancem', 17.5],
+      ['Pečeni riževi rezanci (pad thai) z gamberi', 18.2],
+    ]},
+    { id: 'glavne', name: 'Glavne jedi', dialect: 'Krožniki do sitga najest', items: [
+      ['Kraljevi piščanec', 18.2],
+      ['Piščančji file s sirom v kremni gobovi omaki', 15.9],
+      ['Svinjski ali piščančji dunajski zrezek', 14.9],
+      ['Počasi pečena telečja kračka', 24.9],
+      ['Mešano meso z žara na sablji', 24.5],
+      ['Spare ribs, pečen v krušni peči', 23.5],
+      ['Delavska malca', 15.5],
+      ['Svinjska ribica v ponvici s kremno gobovo omako', 20.5],
+    ]},
+    { id: 'morje', name: 'Iz morja', dialect: 'Ujeto na mrežo', items: [
+      ['Nadevani lignji po toskansko', 20.5],
+      ['Ocvrti lignji, tatarska omaka', 15.5],
+      ['Morska ponvica', 23.9],
+      ['Hobotnica na žaru s pirejem sladkega krompirja', 24.5],
+      ['File brancina', 19.9],
+    ]},
+    { id: 'steak', name: 'Steak house', dialect: 'Steak House', note: 'Steaki se tehtajo pred pripravo. Cena je na 100 g, minimalna teža 300 g.', items: [
+      ['Biftek na žaru, Irska (300 g)', 10.1, [], '/ 100 g'],
+      ['Tagliata Black Angus (min. 300 g)', 9.6, [], '/ 100 g'],
+      ['Ribeye Black Angus Avstralija Prime (min. 300 g)', 10.1, [], '/ 100 g'],
+      ['Striploin Black Angus Kanada Prime (min. 300 g)', 9.6, [], '/ 100 g'],
+      ['Telečji T-bone steak (400 g)', 28.5],
+    ]},
+    { id: 'mehika', name: 'Po mehiško', dialect: 'Po mehiško & tortillas', items: [
+      ['Jalapeñas', 12.5, [HOT]],
+      ['Čebulni obročki', 7.5],
+      ['Takitosi s piščancem', 12.2],
+      ['Sticky fingers v BBQ omaki', 13.8],
+      ['Plato mexicano za predjed', 20.5, [TWO]],
+      ['Chilli con carne', 12.2, [HOT]],
+      ['Quesadillas z rozbifom', 14.9],
+      ['Quesadillas s piščancem', 13.7],
+      ['Quesadillas s tuno', 13.7],
+      ['Chimichangas z rozbifom', 16.9],
+      ['Chimichangas s piščancem', 15.9],
+      ['Chimichangas z zelenjavo', 13.7],
+      ['Fajitas z rozbifom', 32.5, [TWO]],
+      ['Fajitas s piščancem', 29.5, [TWO]],
+      ['Fajitas mix', 32.5, [TWO]],
+      ['Tacos s piščancem', 12.8],
+      ['Tacos z rozbifom', 13.7],
+      ['Tacos s tuno', 12.6],
+      ['Plato mexicano', 44.9, [TWO]],
+    ]},
+    { id: 'pizze', name: 'Pizze', dialect: 'Pizze iz krušne peči', items: [
+      ['Margerita', 10.5], ['Klasika', 12.7], ['Antiskleroza', 12.9], ['Kraška', 13.7], ['Morska', 13.5],
+      ['Mehiška s piščancem', 14.1, [HOT]], ['Mehiška z govedino', 14.7, [HOT]], ['Vegi', 12.2], ['Štirje siri', 12.8],
+      ['Vražja', 14.1, [HOT]], ['Kulen', 14.5, [HOT]], ['Rukola', 14.5], ['Dalmatinska', 12.5], ['Tuna', 12.7],
+      ['Kmečka', 14.5], ['Salamca', 13.9], ['Grška', 13.7], ['Burrata', 15.4], ['Kebab', 13.5], ['Capricioza', 12.9], ['Bela tartufata', 14.5],
+    ]},
+    { id: 'kruhki', name: 'Pizza kruhki', dialect: 'Pizza kruhki', items: [
+      ['Pizza kruhek s sirom', 7.4], ['Pizza kruhek s česnom', 7.2], ['Pizza kruhek s sirom in česnom', 7.5], ['Chips & dips', 7.9],
+    ]},
+    { id: 'bovle', name: 'Bovle', dialect: 'Bovle', items: [
+      ['Teriyaki piščančja bovla', 14.2], ['Golden harvest bovla', 13.8], ['Truffle cezar bovla', 14.2], ['Crunch falafel bovla', 13.8, [VEG]],
+      ['Fitnes protein bovla', 14.2], ['Mehiška bovla z rozbifom', 14.9, [HOT]], ['Avokado & losos bovla', 14.5],
+      ['Sladoledna bovla z vročimi gozdnimi sadeži', 7.5],
+    ]},
+    { id: 'solate', name: 'Solate', dialect: 'Solate', items: [
+      ['Solatni krožnik »Macarena«', 13.8], ['Solatni krožnik s piščancem na žaru in feto', 13.9], ['Grajska solata', 13.1],
+      ['Cezar solata', 13.9], ['Solatno gnezdo', 14.5], ['Mešana solata, mala', 5.7],
+    ]},
+    { id: 'vegan', name: 'Vegansko', dialect: 'Vegansko', items: [
+      ['Brusketa z veganskim sirom', 11.8, [VEG]], ['Pečeni tajski rezanci (pad thai), vegan', 15.5, [VEG]],
+      ['Chimichangas z veganskim sirom in zelenjavo', 14.4, [VEG]], ['Pica z veganskim sirom', 13.4, [VEG]],
+    ]},
+    { id: 'otroci', name: 'Za otroke', dialect: 'Za male korenjake', items: [
+      ['Pizza »Kekec«', 8.8], ['Pohanček »Bedanc«', 12.2], ['Njoki »Pehta«', 10.8],
+    ]},
+    { id: 'sladko', name: 'Sladice', dialect: 'Sladki kotiček', items: [
+      ['Čokoladna bomba', 8.2], ['Tiramisito', 7.8], ['Naši sladki kozarčki iz vitrine', 5.9],
+    ]},
+    { id: 'palacinke', name: 'Palačinke velikanke', dialect: 'Palačinke velikanke', items: [
+      ['Bela čokolada, jagodni pire in kokos', 8.2], ['»Nutela« z banano in keksi', 8.2], ['»Pistacija«', 8.5], ['»Snickers«', 8.2],
+    ]},
+  ];
+
+  const ICON_HOT = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 4.6c.6-1.4 1.9-2.3 3.4-2.4.4 0 .6.5.3.8-1 .6-1.6 1.3-1.9 2.1 1.8 1 2.4 3.1 1.4 5.5-1.7 4.2-6.4 8.8-12.7 10.8-1.5.5-2.7-1-1.8-2.3 2.9-4.1 5.2-8.1 7.7-11.6.9-1.3 2.2-2.5 3.6-2.9z"/></svg>';
+  const ICON_VEG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19c3-4 6-7 10-10"/></svg>';
+  const chip = (t) => t === HOT ? `<span class="chip hot">${ICON_HOT}pikantno</span>`
+    : t === VEG ? `<span class="chip veg">${ICON_VEG}vegan</span>`
+    : `<span class="chip two">za 2</span>`;
+
+  const tabs = document.getElementById('tabs');
+  const panel = document.getElementById('menuPanel');
+  tabs.innerHTML = MENU.map((s, i) => `<button class="tab" role="tab" id="tab-${s.id}" aria-selected="${i === 0}" aria-controls="menuPanel" data-id="${s.id}">${s.name}<span class="n">${s.items.length}</span></button>`).join('');
+
+  function render(id) {
+    const s = MENU.find(x => x.id === id);
+    panel.innerHTML = `
+      <div class="section-title"><h3>${s.name}</h3><span class="dialect">${s.dialect}</span></div>
+      ${s.note ? `<p class="section-note">${s.note}</p>` : ''}
+      <div class="dishes">${s.items.map(([n, p, tags = [], unit], i) => `
+        <div class="dish" style="animation-delay:${Math.min(i, 12) * 28}ms">
+          <div class="dish-name"><span>${n}</span>${tags.map(chip).join('')}<span class="leader"></span></div>
+          <div class="dish-price">${fmt(p)}${unit ? `<small>${unit}</small>` : ''}</div>
+        </div>`).join('')}</div>`;
+    tabs.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', String(t.dataset.id === id)));
+    const active = tabs.querySelector(`[data-id="${id}"]`);
+    if (active) active.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+  }
+  tabs.addEventListener('click', (e) => { const b = e.target.closest('.tab'); if (b) render(b.dataset.id); });
+  tabs.addEventListener('keydown', (e) => {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    const all = [...tabs.querySelectorAll('.tab')];
+    const i = all.findIndex(t => t.getAttribute('aria-selected') === 'true');
+    const next = all[(i + (e.key === 'ArrowRight' ? 1 : -1) + all.length) % all.length];
+    next.focus(); render(next.dataset.id);
+  });
+  render('predjedi');
+
+  /* Pizza wall */
+  const pizze = MENU.find(s => s.id === 'pizze').items;
+  document.getElementById('pizzaWall').innerHTML = pizze.map(([n, p, tags = []]) =>
+    `<div class="pw${tags.includes(HOT) ? ' hot' : ''}"><span>${n}</span><span>${fmt(p)}</span></div>`).join('');
+
+  /* ---------- Embers (hero) ---------- */
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function embers(canvas, opts) {
+    const ctx = canvas.getContext('2d');
+    let w, h, dpr, parts = [];
+    const { count, colors, size, speed, alpha } = opts;
+    function resize() {
+      dpr = Math.min(devicePixelRatio || 1, 2);
+      const r = canvas.getBoundingClientRect();
+      w = r.width; h = r.height;
+      canvas.width = w * dpr; canvas.height = h * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function spawn(p) {
+      p.x = Math.random() * w; p.y = h + Math.random() * h * 0.3;
+      p.r = size[0] + Math.random() * (size[1] - size[0]);
+      p.vy = speed[0] + Math.random() * (speed[1] - speed[0]);
+      p.vx = (Math.random() - 0.5) * 0.25;
+      p.a = alpha[0] + Math.random() * (alpha[1] - alpha[0]);
+      p.c = colors[Math.floor(Math.random() * colors.length)];
+      p.ph = Math.random() * Math.PI * 2;
+      return p;
+    }
+    resize();
+    for (let i = 0; i < count; i++) { const p = spawn({}); p.y = Math.random() * h; parts.push(p); }
+    let last = performance.now();
+    function frame(now) {
+      const dt = Math.min((now - last) / 16.67, 3); last = now;
+      ctx.clearRect(0, 0, w, h);
+      ctx.globalCompositeOperation = 'lighter';
+      for (const p of parts) {
+        p.y -= p.vy * dt; p.x += (p.vx + Math.sin(now / 900 + p.ph) * 0.15) * dt;
+        if (p.y < -20) spawn(p);
+        const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+        g.addColorStop(0, p.c.replace('A', p.a.toFixed(3)));
+        g.addColorStop(1, p.c.replace('A', '0'));
+        ctx.fillStyle = g;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.globalCompositeOperation = 'source-over';
+      if (!reduce) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+    addEventListener('resize', resize);
+  }
+  embers(document.getElementById('embers'), {
+    count: 26, size: [3, 14], speed: [0.15, 0.55], alpha: [0.25, 0.7],
+    colors: ['rgba(255,196,110,A)', 'rgba(255,140,60,A)', 'rgba(255,230,180,A)'],
+  });
+  embers(document.getElementById('ovenCanvas'), {
+    count: 42, size: [20, 140], speed: [0.05, 0.22], alpha: [0.05, 0.16],
+    colors: ['rgba(232,99,43,A)', 'rgba(242,184,75,A)', 'rgba(193,18,31,A)'],
+  });
+
+  /* ---------- Stylised map ---------- */
+  (function map() {
+    const canvas = document.getElementById('mapCanvas');
+    const ctx = canvas.getContext('2d');
+    function draw() {
+      const dpr = Math.min(devicePixelRatio || 1, 2);
+      const r = canvas.getBoundingClientRect();
+      const w = r.width, h = r.height;
+      canvas.width = w * dpr; canvas.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.fillStyle = '#EDE7DC'; ctx.fillRect(0, 0, w, h);
+      // Sava river band
+      ctx.strokeStyle = '#CFDDE0'; ctx.lineWidth = 26; ctx.lineCap = 'round';
+      ctx.beginPath(); ctx.moveTo(-20, h * 0.78); ctx.bezierCurveTo(w * 0.3, h * 0.9, w * 0.6, h * 0.72, w + 20, h * 0.82); ctx.stroke();
+      // blocks
+      ctx.fillStyle = '#E3DCCF';
+      const rnd = (s) => { let x = Math.sin(s) * 10000; return x - Math.floor(x); };
+      for (let i = 0; i < 46; i++) {
+        const bx = rnd(i * 3.1) * w, by = rnd(i * 7.7) * h * 0.72;
+        const bw = 22 + rnd(i * 1.3) * 60, bh = 18 + rnd(i * 2.9) * 44;
+        if (Math.hypot(bx + bw / 2 - w / 2, by + bh / 2 - h / 2) < 46) continue;
+        ctx.fillRect(bx, by, bw, bh);
+      }
+      // roads
+      ctx.strokeStyle = '#FCFAF7'; ctx.lineWidth = 10; ctx.lineCap = 'round';
+      const roads = [
+        [[-20, h * 0.42], [w * 0.35, h * 0.46], [w * 0.7, h * 0.4], [w + 20, h * 0.46]],
+        [[w * 0.5, -20], [w * 0.47, h * 0.3], [w * 0.5, h * 0.6], [w * 0.55, h + 20]],
+        [[-20, h * 0.62], [w * 0.4, h * 0.6], [w + 20, h * 0.66]],
+        [[w * 0.2, -20], [w * 0.22, h * 0.5], [w * 0.15, h + 20]],
+        [[w * 0.8, -20], [w * 0.78, h * 0.5], [w * 0.85, h + 20]],
+      ];
+      for (const rd of roads) { ctx.beginPath(); ctx.moveTo(rd[0][0], rd[0][1]); for (let i = 1; i < rd.length; i++) ctx.lineTo(rd[i][0], rd[i][1]); ctx.stroke(); }
+      ctx.strokeStyle = '#F4EFE7'; ctx.lineWidth = 4;
+      for (let i = 0; i < 9; i++) { ctx.beginPath(); ctx.moveTo(0, i * h / 8 + 14); ctx.lineTo(w, i * h / 8 + 6); ctx.stroke(); }
+      // square
+      ctx.fillStyle = '#F6F1E8'; ctx.beginPath(); ctx.roundRect(w / 2 - 62, h / 2 - 34, 124, 68, 8); ctx.fill();
+      ctx.fillStyle = '#7A6D66'; ctx.font = '600 10px "Instrument Sans", sans-serif'; ctx.letterSpacing = '1.5px';
+      ctx.fillText('TRG TONETA ČUFARJA', w / 2 - 58, h / 2 + 46);
+      ctx.fillStyle = '#9AAeb2'; ctx.fillText('SAVA', 24, h * 0.8 + 4);
+    }
+    draw(); addEventListener('resize', draw);
+  })();
+})();
+</script>
+</body>
+</html>
